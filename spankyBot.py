@@ -8,8 +8,9 @@ class MyClient(discord.Client):
         msg_str = str(message.content)
         if str(message.author) == "spanky#3159":
             if "trash" in msg_str.lower() or "t r a s h" in msg_str.lower():
-                await message.channel.send(msg_str.replace("trash", "amazing, @spanky#3159 loves it!"))
+                spankId = "<@259430446037860353>"
+                await message.channel.send(msg_str.replace("trash", "amazing, %s loves it!" % spankId))
 
 client = MyClient()
 
-client.run("NjA4MjY5NDc2OTM2NTQ4MzYy.XUmECQ.NIUVLEfD8d6t5_Za8tT3rxd0qwM")
+client.run("NjA4MjY5NDc2OTM2NTQ4MzYy.XUmFxA.B3gNRdB3is1gAgUPGprq6vYpB78")
