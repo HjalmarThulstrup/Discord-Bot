@@ -5,12 +5,10 @@ class MyClient(discord.Client):
         print('Logged on as', self.user)
 
     async def on_message(self, message):
-        # don't respond to ourselves
-        if message.author == self.user:
-            return
-        num = random.randint(1,11)
-        if num == 7:
-            await message.channel.send("you're a dink")
+        msg_str = str(message.content)
+        if str(message.author) == "spanky#3159":
+            if "trash" in msg_str.lower():
+                await message.channel.send(msg_str.replace("trash", "amazing, @spanky#3159 loves it!"))
 
 client = MyClient()
 
